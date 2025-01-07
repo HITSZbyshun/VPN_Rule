@@ -1,0 +1,44 @@
+function main(config) {
+  // 读取现有的规则
+  let oldRules = config.rules;
+  
+  // 定义新的规则
+  let newRules = [
+    "PROCESS-NAME,Zotero,DIRECT,no-resolve",
+    "PROCESS-NAME,Kazumi,DIRECT,no-resolve",
+    "DOMAIN-SUFFIX,cc98.org,DIRECT,no-resolve",
+    "DOMAIN-SUFFIX,auth.elsevier.com,DIRECT,no-resolve",
+    "DOMAIN-SUFFIX,ieeexplore.ieee.org,DIRECT,no-resolve",
+    "DOMAIN-SUFFIX,leetcode.cn,DIRECT,no-resolve",
+    
+    "DOMAIN-SUFFIX,huggingface.co,ChatGPT,no-resolve",
+    "DOMAIN-SUFFIX,koofr.net,ChatGPT,no-resolve",
+    
+    "DOMAIN-KEYWORD,jetbrains,DIRECT,no-resolve",
+    "DOMAIN-SUFFIX,cnki.net,DIRECT,no-resolve",
+    "DOMAIN-SUFFIX,imoyuapp.win,DIRECT,no-resolve",
+    "DOMAIN-KEYWORD,paddle,DIRECT,no-resolve",
+    "DOMAIN-KEYWORD,ieee,DIRECT,no-resolve",
+
+    "DOMAIN-SUFFIX,steamcontent.com,DIRECT,no-resolve",
+    "DOMAIN-SUFFIX,steamstatic.com,DIRECT,no-resolve",
+    "DOMAIN-SUFFIX,steamserver.net,DIRECT,no-resolve",
+    "DOMAIN-SUFFIX,test.steampowered.com,DIRECT,no-resolve",
+    "DOMAIN-SUFFIX,api.steampowered.com,DIRECT,no-resolve",
+    "DOMAIN-SUFFIX,rmbgame.net,DIRECT,no-resolve",
+
+
+  ];
+
+  // 将新的规则添加到现有的规则中
+  oldRules = newRules.concat(oldRules);
+  
+  // 更新配置的规则
+  config.rules = oldRules;
+  
+  // 返回修改后的配置
+  return config;
+}
+
+
+

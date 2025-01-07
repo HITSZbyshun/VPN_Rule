@@ -1,0 +1,11 @@
+# Profile Enhancement Merge Template for Clash Verge
+
+profile:
+  store-selected: true
+
+dns:
+  enable: true
+  nameserver-policy:
+    '+.zju.edu.cn': '10.10.0.21'
+    'net.zju.edu.cn': '10.10.0.21'
+    '+.ieee.org': '10.10.0.21'
